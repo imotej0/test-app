@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer("user_id")->unsigned();
             $table->foreign('user_id')
             ->on('users')
-            $table->string('post');
+            $table->string('post', 100);
             $table->string('caption');
             $table->timestamps();
         });
