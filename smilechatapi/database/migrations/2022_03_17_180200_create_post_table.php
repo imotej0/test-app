@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')
             ->on('users')
             ->onUpdate('cascade')
-            ->onDelete('cascade');;
+            ->onDelete('cascade');
             $table->string('post');
             $table->string('caption');
             $table->timestamps();

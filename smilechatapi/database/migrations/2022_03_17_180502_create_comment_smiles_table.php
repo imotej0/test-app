@@ -19,12 +19,12 @@ return new class extends Migration
             $table->foreign('user_id')
             ->on('users')
             ->onUpdate('cascade')
-            ->onDelete('cascade');;
+            ->onDelete('cascade');
             $table->unsignedBigInteger('comment_id');
             $table->foreign('comment_id')
             ->on('comments')
             ->onUpdate('cascade')
-            ->onDelete('cascade');;
+            ->onDelete('cascade');
             $table->booleal('smile');
             $table->timestamps();
         });
