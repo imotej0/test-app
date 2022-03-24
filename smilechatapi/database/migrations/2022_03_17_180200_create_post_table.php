@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('post', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
+            $table->bigIncrements("id");
+            $table->unsignedBigInteger("user_id");
             $table->foreign('user_id')
             ->on('users')
             ->onUpdate('cascade')
