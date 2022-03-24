@@ -1,4 +1,4 @@
-# fitnes
+# smilechat
 
 ## Project setup
 ```
