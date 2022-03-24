@@ -15,11 +15,9 @@ return new class extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->unsignedBigInteger("user_id");
+            $table->integer("user_id")->unsigned();
             $table->foreign('user_id')
             ->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
             $table->string('post');
             $table->string('caption');
             $table->timestamps();
