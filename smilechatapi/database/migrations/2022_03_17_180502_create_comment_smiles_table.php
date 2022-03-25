@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->bigInteger('comment_id');
             $table->foreign('comment_id')->references('id')->on('comments');
-            $table->booleal('smile');
+            $table->boolean('smile');
             $table->timestamps();
         });
     }

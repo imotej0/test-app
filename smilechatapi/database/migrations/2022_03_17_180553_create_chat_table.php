@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger("user_id")->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('friend_id');
+            $table->unsignedBigInteger('friend_id')->unsigned();
             $table->foreign('friend_id')->references('id')->on('friends');
             $table->string('message');
             $table->timestamps();
