@@ -24,3 +24,11 @@ route::get('/post', function() {
     return post::all();
 
 });
+
+Route::post('/post', function(){
+    return Post::create([
+        'post' => request('post')
+
+        'caption' => request('caption'),
+     ])
+})
