@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger("user_id")->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->bigInteger('post_id')->unsigned();
-            $table->foreign('post_id')->references('id')->on('post');
+            $table->foreign('post_id')->references('id')->on('posts');
             $table->boolean('smile');
             $table->timestamps();
         });

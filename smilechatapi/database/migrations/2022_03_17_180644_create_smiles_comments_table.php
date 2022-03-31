@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comment_smiles', function (Blueprint $table) {
+        Schema::create('smiles_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger("user_id")->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment_smiles');
+        Schema::dropIfExists('smiles_comments');
     }
 };

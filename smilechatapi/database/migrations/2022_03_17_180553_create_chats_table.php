@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
-            $table->bigIncrements("id");
+        Schema::create('chats', function (Blueprint $table) {
+            $table->id();
             $table->bigInteger("user_id")->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('post');
-            $table->string('caption');
+            $table->unsignedBigInteger('friend_id')->unsigned();
+            $table->foreign('friend_id')->references('id')->on('friends');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('chats');
     }
 };
