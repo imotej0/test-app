@@ -15,17 +15,11 @@ return new class extends Migration
     {
         Schema::create('smiles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')
-            ->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');;
-            $table->unsignedBigInteger('post_id');
-            $table->foreign('post_id')
-            ->on('post')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');;
-            $table->booleal('smile');
+            $table->bigInteger("user_id")->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('post_id')->unsigned();
+            $table->foreign('post_id')->references('id')->on('posts');
+            $table->boolean('smile');
             $table->timestamps();
         });
     }

@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
+        Schema::create('smiles_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')
-            ->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');;
-            $table->string('post');
-            $table->string('caption');
+            $table->bigInteger("user_id")->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('comment_id')->unsigned();
+            $table->foreign('comment_id')->references('id')->on('comments');
+            $table->boolean('smile');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('smiles_comments');
     }
 };

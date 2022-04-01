@@ -15,16 +15,10 @@ return new class extends Migration
     {
         Schema::create('friends', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')
-            ->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-            $table->unsignedBigInteger('user_id2');
-            $table->foreign('user_id2')
-            ->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->bigInteger("user_id1")->unsigned();
+            $table->foreign('user_id1')->references('id')->on('users');
+            $table->bigInteger("user_id2")->unsigned();
+            $table->foreign('user_id2')->references('id')->on('users');
             $table->timestamps();
         });
     }
