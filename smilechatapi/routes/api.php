@@ -73,7 +73,7 @@ Route::post('/post', function() {
     ]);
 });
 
-Route::post('/friends', function() {
+Route::friends('/friends', function() {
 
     return Friends::create([
 
@@ -84,7 +84,7 @@ Route::post('/friends', function() {
     ]);
 });
 
-Route::post('/smiles', function() {
+Route::smiles('/smiles', function() {
 
     return Smile::create([
 
@@ -97,7 +97,7 @@ Route::post('/smiles', function() {
     ]);
 });
 
-Route::post('/comments', function() {
+Route::comments('/comments', function() {
 
     return Comment::create([
 
@@ -110,7 +110,7 @@ Route::post('/comments', function() {
     ]);
 });
 
-Route::post('/chats', function() {
+Route::chats('/chats', function() {
 
     return Chat::create([
 
@@ -123,9 +123,9 @@ Route::post('/chats', function() {
     ]);
 });
 
-Route::post('/smiles_comments', function() {
+Route::smiles_comments('/smiles_comments', function() {
 
-    return Post::create([
+    return Smiles_comment::create([
 
         'user_id' => request(1),
 
