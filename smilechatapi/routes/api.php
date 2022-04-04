@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Models\Post;
 use App\Models\Friends;
 use App\Models\Smile;
@@ -42,17 +43,15 @@ route::get('/smile', function() {
 
 });
 
+Route::get('/chat', 'App\Http\Controllers\ChatController@index');
+
 route::get('/commnets', function() {
 
     return Comment::all();
 
 });
 
-route::get('/chat', function() {
 
-    return Chat::all();
-
-});
 
 route::get('/smiles_comments', function() {
 
@@ -73,7 +72,7 @@ Route::post('/post', function() {
     ]);
 });
 
-Route::friends('/friends', function() {
+Route::post('/friends', function() {
 
     return Friends::create([
 
@@ -84,7 +83,7 @@ Route::friends('/friends', function() {
     ]);
 });
 
-Route::smiles('/smiles', function() {
+Route::post('/smiles', function() {
 
     return Smile::create([
 
@@ -97,7 +96,7 @@ Route::smiles('/smiles', function() {
     ]);
 });
 
-Route::comments('/comments', function() {
+Route::post('/comments', function() {
 
     return Comment::create([
 
@@ -110,20 +109,9 @@ Route::comments('/comments', function() {
     ]);
 });
 
-Route::chats('/chats', function() {
 
-    return Chat::create([
 
-        'user_id' => request(1),
-
-        'friend_id' => request(1),
-
-        'message' => request('ju3 biljard?'),
-
-    ]);
-});
-
-Route::smiles_comments('/smiles_comments', function() {
+Route::post('/smiles_comments', function() {
 
     return Smiles_comment::create([
 
