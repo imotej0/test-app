@@ -1,12 +1,19 @@
 <?php
 
-use App\Http\Controllers\UserController;
+
 use App\Models\Post;
 use App\Models\Friends;
 use App\Models\Smile;
 use App\Models\Chat;
 use App\Models\Smiles_comment;
 use App\Models\Comment;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ChatController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FriendsController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\SmileController;
+use App\Http\Controllers\Smiles_commentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,101 +32,26 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-route::get('/posts', function() {
+Route::get('/chats', [ChatController::class, 'index']);
 
-    return Post::all();
+Route::get('/comments', [CommentController::class, 'index']);
 
-});
+Route::get('/friends', [FriendsController::class, 'index']);
 
-route::get('/friends', function() {
+Route::get('/posts', [PostController::class, 'index']);
 
-    return Friends::all();
+Route::get('/smiles', [SmileController::class, 'index']);
 
-});
+Route::get('/smiles-comments', [Smiles_commentController::class, 'index']);
 
-route::get('/smile', function() {
+Route::get('/chats/{id}', [ChatController::class, 'show']);
 
-    return Smile::all();
+Route::get('/comments/{id}', [CommentController::class, 'show']);
 
-});
+Route::get('/friends/{id}', [FriendsController::class, 'show']);
 
-Route::get('/chat', 'App\Http\Controllers\ChatController@index');
+Route::get('/posts/{id}', [PostsController::class, 'show']);
 
-route::get('/commnets', function() {
+Route::get('/smiles/{id}', [SmileController::class, 'show']);
 
-    return Comment::all();
-
-});
-
-
-
-route::get('/smiles_comments', function() {
-
-    return Smiles_comment::all();
-
-});
-
-Route::post('/post', function() {
-
-    return Post::create([
-
-        'user_id' => request(1),
-
-        'post' => request('post'),
-
-        'caption' => request('caption'),
-
-    ]);
-});
-
-Route::post('/friends', function() {
-
-    return Friends::create([
-
-        'user_id1' => request(1),
-
-        'user_id2' => request(2),
-
-    ]);
-});
-
-Route::post('/smiles', function() {
-
-    return Smile::create([
-
-        'user_id' => request(1),
-
-        'post_id' => request(1),
-
-        'smile' => request(TRUE),
-
-    ]);
-});
-
-Route::post('/comments', function() {
-
-    return Comment::create([
-
-        'user_id' => request(1),
-
-        'post_id' => request(2),
-
-        'comment' => request('Kvaliteta slike je top'),
-
-    ]);
-});
-
-
-
-Route::post('/smiles_comments', function() {
-
-    return Smiles_comment::create([
-
-        'user_id' => request(1),
-
-        'comment_id' => request(1),
-
-        'smile' => request(TRUE),
-
-    ]);
-});
+Route::get('/smiles-comments/{id}', [SmileCommentController::class, 'show']);
