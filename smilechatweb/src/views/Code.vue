@@ -20,28 +20,28 @@
                         >Sing up to see photos and videos <br>
                         from your friends</h3></h5>
                          <div>
-    <div class="ma-auto position-relative" style="max-width: 300px">
-      <v-otp-input
-        v-model="otp"
-        :disabled="loading"
-        @finish="onFinish"
-      ></v-otp-input>
-      <v-overlay absolute :value="loading">
-        <v-progress-circular
-          indeterminate
-          color="primary"
-        ></v-progress-circular>
-      </v-overlay>
-    </div>
-    <div class="text-center  black--text">Type or copy/paste.</div>
-    <v-snackbar
-      v-model="snackbar"
-      :color="snackbarColor"
-      :timeout="2000"
-    >
-      {{ text }}
-    </v-snackbar>
-  </div>
+                            <div class="ma-auto position-relative" style="max-width: 390px">
+                              <v-otp-input
+                                v-model="otp"
+                                :disabled="loading"
+                                @finish="onFinish"
+                              ></v-otp-input>
+                              <v-overlay absolute :value="loading">
+                                <v-progress-circular
+                                  indeterminate
+                                  color="primary"
+                                ></v-progress-circular>
+                              </v-overlay>
+                            </div>
+                            <div class="text-center  gray--text">Type or copy/paste.</div>
+                            <v-snackbar
+                              v-model="snackbar"
+                              :color="snackbarColor"
+                              :timeout="2000"
+                            >
+                              {{ text }}
+                            </v-snackbar>
+                          </div>
                       <router-link to="/Code">Resand Code</router-link>
                             <v-row>
                               <v-col cols="12" sm="7">
@@ -56,7 +56,7 @@
                       </v-card-text>
                     </v-col>
                     <v-col cols="12" md="6" class="blue rounded-bl-xl" >
-                    <div style="  text-align: center; padding: 350px 0;">
+                    <div style="  text-align: center; padding: 390px 0;">
                       <v-card-text class="white--text" >
                       </v-card-text>
                       <div class="text-center">

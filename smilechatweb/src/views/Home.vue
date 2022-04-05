@@ -58,7 +58,7 @@
                 <v-window-item :value="2">
                   <v-row >
                     <v-col cols="12" md="6" class="blue rounded-br-xl">
-                     <div style="  text-align: center; padding: 1920px 0;">
+                     <div style="  text-align: center; padding: 390px 0;">
                       <v-card-text class="white--text" >
                         <h3 class="text-center ">Already have account? </h3>
                       </v-card-text>
@@ -120,6 +120,7 @@
                               </v-col>
                             </v-row>
                           <v-btn color="blue" dark block tile>Sign up</v-btn>
+                          <router-link to="/Verfication"></router-link>
                           </v-col>
                         </v-row>  
                       </v-card-text>

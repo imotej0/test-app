@@ -40,7 +40,7 @@
                       </v-card-text>
                     </v-col>
                     <v-col cols="12" md="6" class="blue rounded-bl-xl" >
-                    <div style="  text-align: center; padding: 350px 0;">
+                    <div style="  text-align: center; padding: 390px 0;">
                       <v-card-text class="white--text" >
                       </v-card-text>
                       <div class="text-center">
