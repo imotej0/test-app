@@ -19,11 +19,29 @@
                           class="text-center  grey--text "
                         >Sing up to see photos and videos <br>
                         from your friends</h3></h5>
-                          <v-otp-input
-                          disabled
-                          length="6"
-                          type="number"
-                        ></v-otp-input>   
+                         <div>
+    <div class="ma-auto position-relative" style="max-width: 300px">
+      <v-otp-input
+        v-model="otp"
+        :disabled="loading"
+        @finish="onFinish"
+      ></v-otp-input>
+      <v-overlay absolute :value="loading">
+        <v-progress-circular
+          indeterminate
+          color="primary"
+        ></v-progress-circular>
+      </v-overlay>
+    </div>
+    <div class="text-center  black--text">Type or copy/paste.</div>
+    <v-snackbar
+      v-model="snackbar"
+      :color="snackbarColor"
+      :timeout="2000"
+    >
+      {{ text }}
+    </v-snackbar>
+  </div>
                       <router-link to="/Code">Resand Code</router-link>
                             <v-row>
                               <v-col cols="12" sm="7">
@@ -56,19 +74,35 @@
   </v-container>
 </template>
 
-<script>
-  
 
+<script>
   export default {
-   data: () => ({
-    step: 1
-  }),
-  props: {
-    source: String
-  } 
+    data: () => ({
+      loading: false,
+      snackbar: false,
+      snackbarColor: 'default',
+      otp: '',
+      text: '',
+      expectedOtp: '000000',
+    }),
+    methods: {
+      onFinish (rsp) {
+        this.loading = true
+        setTimeout(() => {
+          this.loading = false
+          this.snackbarColor = (rsp === this.expectedOtp) ? 'success' : 'warning'
+          this.text = `Processed OTP with "${rsp}" (${this.snackbarColor})`
+          this.snackbar = true
+        }, 3500)
+      },
+    },
+  }
+
+
+
 
     
-  }
+  
 </script>
 <style scoped>
 .v-application .rounded-bl-xl {
@@ -77,5 +111,8 @@
 .v-application .rounded-br-xl {
     border-bottom-right-radius: 300px !important;
 }
+.position-relative {
+   position: relative;
+}
 </style>
-s
+
