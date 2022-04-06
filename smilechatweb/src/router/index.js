@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,6 +39,11 @@ const routes = [
       path: '/Resetpassword',
       name: 'Resetpassword',
       component: () => import(/* webpackChunkName: "Resetpassword" */ '../views/Resetpassword.vue')
+    },
+    {
+      path: '/HomeScreen',
+      name: 'HomeScreen',
+      component: () => import(/* webpackChunkName: "HomeScreen" */ '../views/HomeScreen.vue')
     },
 ]
 
