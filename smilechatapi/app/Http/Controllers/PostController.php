@@ -18,8 +18,6 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return view('posts', [
-            'posts' => Post::findOrFail($id)
-        ]);
+        return Post::findOrFail($id);
     }
 }

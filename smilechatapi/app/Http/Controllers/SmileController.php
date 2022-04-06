@@ -19,8 +19,7 @@ class SmileController extends Controller
      */
     public function show($id)
     {
-        return view('smiles', [
-            'smiles' => Smile::findOrFail($id)
-        ]);
+        return Smile::findOrFail($id);
+
     }
 }

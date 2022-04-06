@@ -18,8 +18,6 @@ class FriendsController extends Controller
      */
     public function show($id)
     {
-        return view('friends', [
-            'friends' => Friends::findOrFail($id)
-        ]);
+        return Friends::findOrFail($id);
     }
 }

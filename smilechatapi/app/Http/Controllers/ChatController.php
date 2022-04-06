@@ -18,9 +18,8 @@ class ChatController extends Controller
      */
     public function show($id)
     {
-        return view('chats', [
-            'chats' => Chat::findOrFail($id)
-        ]);
+        return Chat::findOrFail($id);
+        
     }
 }
 

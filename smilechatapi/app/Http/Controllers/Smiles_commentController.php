@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Smiles_comment;
+use App\Models\SmileComment;
 
 class Smiles_commentController extends Controller
 {
     public function index() {
-        return SmileComment::all();
+        return Smile::all();
     }
     /**
      * Show the profile for a given user.
@@ -18,8 +18,7 @@ class Smiles_commentController extends Controller
      */
     public function show($id)
     {
-        return view('smiles-comments', [
-            'smiles-comments' => SmileComment::findOrFail($id)
-        ]);
+        return Smile::findOrFail($id);
+
     }
 }

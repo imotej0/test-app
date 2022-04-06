@@ -18,8 +18,6 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        return view('comments', [
-            'comments' => Comment::findOrFail($id)
-        ]);
+        return Comment::findOrFail($id);
     }
 }

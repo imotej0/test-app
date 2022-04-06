@@ -13,7 +13,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FriendsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SmileController;
-use App\Http\Controllers\Smiles_commentController;
+use App\Http\Controllers\SmileCommentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -42,7 +42,7 @@ Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/smiles', [SmileController::class, 'index']);
 
-Route::get('/smiles-comments', [Smiles_commentController::class, 'index']);
+Route::get('/smiles-comments', [SmileCommentController::class, 'index']);
 
 Route::get('/chats/{id}', [ChatController::class, 'show']);
 
