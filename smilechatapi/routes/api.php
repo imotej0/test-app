@@ -44,6 +44,8 @@ Route::get('/smiles', [SmileController::class, 'index']);
 
 Route::get('/smiles-comments', [SmileCommentController::class, 'index']);
 
+
+
 Route::get('/chats/{id}', [ChatController::class, 'show']);
 
 Route::get('/comments/{id}', [CommentController::class, 'show']);
