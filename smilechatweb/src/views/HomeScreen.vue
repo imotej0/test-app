@@ -31,81 +31,110 @@
         <v-icon>mdi-account</v-icon>
       </v-btn>
     </v-toolbar>
-      <v-card
-    :loading="loading"
-    class="mx-auto my-12"
-    max-width="374"
+       <v-card
+    class="mx-auto"
+    color="#fff"
+    white
+    max-width="800"
+    height="60"
   >
-    <template slot="progress">
-      <v-progress-linear
-        color="deep-purple"
-        height="10"
-        indeterminate
-      ></v-progress-linear>
-    </template>
-
-    <v-img
-      height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
-
-    <v-card-title>Cafe Badilico</v-card-title>
-
-    <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
+  <v-card-title>
+      <v-icon
+        large
+        left
       >
-        <v-rating
-          :value="4.5"
-          color="amber"
-          dense
-          half-increments
-          readonly
-          size="14"
-        ></v-rating>
-
-        <div class="grey--text ms-4">
-          4.5 (413)
-        </div>
-      </v-row>
-
-      <div class="my-4 text-subtitle-1">
-        $ • Italian, Cafe
-      </div>
-
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
-    </v-card-text>
-
-    <v-divider class="mx-4"></v-divider>
-
-    <v-card-title>Tonight's availability</v-card-title>
-
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
+        mdi-account
+      </v-icon>
+       <v-icon
+        large
+        left
       >
-        <v-chip>5:30PM</v-chip>
+        mdi-account
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+        mdi-account
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+        mdi-account
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+        mdi-account
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+        mdi-account
+      </v-icon>  <v-icon
+        large
+        left
+      >
+        mdi-account
+      </v-icon>
+    </v-card-title>
+    <v-card-title>
+      <v-icon
+        large
+        left
+      >
+        mdi-account
+      </v-icon>
+      <span class="text-h6 font-weight-light">Jovan</span>
+    </v-card-title>
+  <v-card
+    class="mx-auto"
+    color="#fff"
+    white
+    max-width="800"
+    height="500"
+  >
+    <v-card-title>
+      <v-icon
+        large
+        left
+      >
+      </v-icon>
+    </v-card-title>
 
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
+    <v-card-text class="text-h5 font-weight-bold">
+      "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
     </v-card-text>
 
     <v-card-actions>
-      <v-btn
-        color="deep-purple lighten-2"
-        text
-        @click="reserve"
-      >
-        Reserve
-      </v-btn>
+      <v-list-item class="grow">
+        <v-row
+          align="center"
+          justify=""
+        >
+          <v-icon class="mr-2">
+            mdi-emoticon
+          </v-icon>
+          <span class="mr-2"></span>
+          <v-icon class="mr-2">
+           mdi-comment
+          </v-icon>
+           <v-icon class="mr-2">
+           mdi-share-variant
+          </v-icon>
+        </v-row>
+      </v-list-item>
     </v-card-actions>
+  </v-card>
+
+
+
+
+
+
   </v-card>
 </v-card>
 
