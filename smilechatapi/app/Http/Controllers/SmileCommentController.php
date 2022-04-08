@@ -10,15 +10,7 @@ class SmileCommentController extends Controller
     public function index() {
         return SmileComment::all();
     }
-    /**
-     * Show the profile for a given user.
-     *
-     * @param  int  $id
-     * @return \Illuminate\View\View
-     */
-    public function show($id)
-    {
-        return SmileComment::findOrFail($id);
-
+    public function show(SmileComment $SmileComment) {
+        return $SmileComment;
     }
 }

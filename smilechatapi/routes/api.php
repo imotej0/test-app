@@ -32,28 +32,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/chats', [ChatController::class, 'index']);
-
-Route::get('/comments', [CommentController::class, 'index']);
-
-Route::get('/friends', [FriendsController::class, 'index']);
-
-Route::get('/posts', [PostController::class, 'index']);
-
-Route::get('/smiles', [SmileController::class, 'index']);
-
-Route::get('/smiles-comments', [SmileCommentController::class, 'index']);
-
-
-
-Route::get('/chats/{id}', [ChatController::class, 'show']);
-
-Route::get('/comments/{id}', [CommentController::class, 'show']);
-
-Route::get('/friends/{id}', [FriendsController::class, 'show']);
-
-Route::get('/posts/{id}', [PostsController::class, 'show']);
-
-Route::get('/smiles/{id}', [SmileController::class, 'show']);
-
-Route::get('/smiles-comments/{id}', [SmileCommentController::class, 'show']);
+Route::apiResource('chats', ChatController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('comments', CommentController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('friends', FriendsController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('posts', PostController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('smiles', SmileController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('smiles-comments', SmileCommentController::class)->only(['index', 'show', 'update', 'destroy', 'store']);

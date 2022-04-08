@@ -10,14 +10,7 @@ class PostController extends Controller
     public function index() {
         return Post::all();
     }
-    /**
-     * Show the profile for a given user.
-     *
-     * @param  int  $id
-     * @return \Illuminate\View\View
-     */
-    public function show($id)
-    {
-        return Post::findOrFail($id);
+    public function show(Post $Post) {
+        return $Post;
     }
 }

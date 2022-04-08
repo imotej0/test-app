@@ -10,14 +10,7 @@ class CommentController extends Controller
     public function index() {
         return Comment::all();
     }
-    /**
-     * Show the profile for a given user.
-     *
-     * @param  int  $id
-     * @return \Illuminate\View\View
-     */
-    public function show($id)
-    {
-        return Comment::findOrFail($id);
+    public function show(Comment $Comment) {
+        return $Comment;
     }
 }
