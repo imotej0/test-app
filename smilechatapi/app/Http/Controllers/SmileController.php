@@ -14,4 +14,12 @@ class SmileController extends Controller
     public function show(Smile $Smile) {
         return $Smile;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|integer|digits:5',
+      'post_id' => 'required|integer|digits:5',
+      'smile' => 'required',
+      ]);
+    }
 }
