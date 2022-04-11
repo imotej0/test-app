@@ -17,7 +17,7 @@ class FriendsController extends Controller
     {
       $this->validate($request, [
       'user_id1' => 'required|integer|digits:5',
-      'post_id2' => 'required|integer|digits:5',
+      'user_id2' => 'required|integer|digits:5',
       'smile' => 'required',
       ]);
     }
