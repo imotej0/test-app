@@ -22,4 +22,9 @@ class SmileController extends Controller
       'smile' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $Smile = Smile::where('id', '=', $id)->first();
+        $Smile->update($request->all());
+    }
 }

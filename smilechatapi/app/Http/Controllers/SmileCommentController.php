@@ -21,4 +21,9 @@ class SmileCommentController extends Controller
       'smile' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $SmileComment = SmileComment::where('id', '=', $id)->first();
+        $SmileComment->update($request->all());
+    }
 }

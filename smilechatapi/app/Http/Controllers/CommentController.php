@@ -21,4 +21,9 @@ class CommentController extends Controller
       'comment' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $Comment = Comment::where('id', '=', $id)->first();
+        $Comment->update($request->all());
+    }
 }

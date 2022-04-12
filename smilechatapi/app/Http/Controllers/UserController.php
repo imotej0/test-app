@@ -26,4 +26,14 @@ class UserController extends Controller
       'bio' => 'required'
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $User = User::where('id', '=', $id)->first();
+        $User->update($request->all());
+    }
+    public function destroy(Request $request, $id)
+    {
+        $user = User::where('id', '=', $id)->first();
+        $user->delete();
+    }
 }

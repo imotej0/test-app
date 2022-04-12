@@ -20,4 +20,9 @@ class FriendsController extends Controller
       'user_id2' => 'required|integer|digits:5'
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $Friends = Friends::where('id', '=', $id)->first();
+        $Friends->update($request->all());
+    }
 }

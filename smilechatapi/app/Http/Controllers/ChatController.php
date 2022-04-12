@@ -25,7 +25,6 @@ class ChatController extends Controller
     {
         $Chat = Chat::where('id', '=', $id)->first();
         $Chat->update($request->all());
-        
     }
 }
 

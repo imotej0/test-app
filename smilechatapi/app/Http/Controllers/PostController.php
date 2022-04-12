@@ -21,4 +21,9 @@ class PostController extends Controller
       'caption' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $Post = Post::where('id', '=', $id)->first();
+        $Post->update($request->all());
+    }
 }

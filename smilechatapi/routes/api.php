@@ -38,3 +38,5 @@ Route::apiResource('friends', FriendsController::class)->only(['index', 'show', 
 Route::apiResource('posts', PostController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
 Route::apiResource('smiles', SmileController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
 Route::apiResource('smiles-comments', SmileCommentController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('users', UserController::class);
+
