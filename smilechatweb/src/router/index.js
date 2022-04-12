@@ -45,6 +45,12 @@ const routes = [
       name: 'HomeScreen',
       component: () => import(/* webpackChunkName: "HomeScreen" */ '../views/HomeScreen.vue')
     },
+    {
+      path: '/Profile',
+      name: 'Profile',
+      component: () => import(/* webpackChunkName: "Profile" */ '../views/Profile.vue')
+    },
+    
 ]
 
 const router = new VueRouter({
