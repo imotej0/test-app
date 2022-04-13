@@ -7,21 +7,33 @@
            
             <v-card
               class="mx-auto"
-              color="#ECECEC"
+              color="white"
               light
               max-width="1200"
               width="1200"
             >
+
             <v-row>
                 <v-card-title primary-titles class="justify-left">
                   <v-icon  light size="200" >mdi-account-circle</v-icon> 
                 </v-card-title>
               <v-list-item-content>
                 <v-list-item-title-font-size>
+                  <v-btn
+                  tile
+                  color="Grey"
+                >
+                  <v-icon left>
+                    mdi-pencil
+                  </v-icon>
+                  Edit
+                </v-btn>
                     <v-list-item-title class="text-h5 font-weight-bold" align="left">gugunovic_official</v-list-item-title>
+                    
                     <v-list-item-title class="text-h5 font-weight" align="left">8 Posts  &nbsp;&nbsp;&nbsp;&nbsp; 46 Followers &nbsp;&nbsp;&nbsp;&nbsp; 4 Following</v-list-item-title>
                 </v-list-item-title-font-size>
               </v-list-item-content>
+       
             </v-row>
               <v-row>
               <v-col
@@ -51,11 +63,7 @@
                 </v-img>
               </v-col>
             </v-row>
-
           </v-card>
-
-
-
           </v-col>
         </v-row>
       </v-container>
