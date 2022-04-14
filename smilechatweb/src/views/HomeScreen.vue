@@ -4,52 +4,23 @@
     flat
     height="50px"
     tile
+    align=center
   >
-    <v-toolbar dense>
-      <v-toolbar-title>SmileChat</v-toolbar-title>
-      <v-spacer></v-spacer>
- <v-text-field
-        hide-details
-        prepend-icon="mdi-magnify"
-        single-line
-        justify
-      ></v-text-field>
- <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-message</v-icon>
-      </v-btn>
-
-       <v-btn icon>
-        <v-icon>mdi-plus</v-icon>
-      </v-btn>
-
-       <v-btn icon>
-        <v-icon>mdi-emoticon</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
-      
-    </v-toolbar>
     
        <v-card
     class="mx-auto"
     color="#white"
     max-width="800"
     height="60"
+    align=left
+  
   >
   <v-card-title class="d-flex justify-space-between" >
       <v-icon
         large
         left
       >
-        mdi-account
+        mdi-account-circle
 
       </v-icon>
        <v-icon
@@ -58,38 +29,56 @@
         v-list-item-avatar color="blue"
       >
      
-        mdi-account
+       mdi-account-circle
       </v-icon>
         <v-icon
         large
         left
       >
-        mdi-account
+        mdi-account-circle
       </v-icon>
         <v-icon
         large
         left
         v-list-item-avatar color="blue"
       >
-        mdi-account
+       mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+       >
+          mdi-account-circle
       </v-icon>
         <v-icon
         large
         left
       >
-        mdi-account
+          mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+         >
+          mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+        mdi-account-circle
       </v-icon>
         <v-icon
         large
         left
          v-list-item-avatar color="blue"
       >
-        mdi-account
+        mdi-account-circle
       </v-icon>  <v-icon
         large
         left
       >
-        mdi-account
+       
       </v-icon>
     </v-card-title>
     <v-card-title>
@@ -108,7 +97,7 @@
     height="500"
   >
   <v-icon>
-     mdi-account 
+      mdi-account-circle 
       </v-icon>
     <span class="text-h7 font-weight-light">Jovan</span>
     <v-card-title>
