@@ -27,4 +27,16 @@ class SmileController extends Controller
         $Smile = Smile::where('id', '=', $id)->first();
         $Smile->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $Smile = Smile::where('id', '=', $id)->first();
+        $Smile->delete();
+    }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'smile'=>'required',
+        ]);
+            return $request->input();
+        }
 }

@@ -26,6 +26,18 @@ class ChatController extends Controller
         $Chat = Chat::where('id', '=', $id)->first();
         $Chat->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $Chat = Chat::where('id', '=', $id)->first();
+        $Chat->delete();
+    }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'message'=>'required',
+        ]);
+            return $request->input();
+        }
 }
 
 

@@ -25,4 +25,17 @@ class FriendsController extends Controller
         $Friends = Friends::where('id', '=', $id)->first();
         $Friends->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $Friends = Friends::where('id', '=', $id)->first();
+        $Friends->delete();
+    }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'user_id1'=>'required',
+            'user_id2'=>'required',
+        ]);
+            return $request->input();
+        }
 }

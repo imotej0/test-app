@@ -32,11 +32,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('chats', ChatController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
-Route::apiResource('comments', CommentController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
-Route::apiResource('friends', FriendsController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
-Route::apiResource('posts', PostController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
-Route::apiResource('smiles', SmileController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
-Route::apiResource('smiles-comments', SmileCommentController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('chats', ChatController::class);
+Route::apiResource('comments', CommentController::class);
+Route::apiResource('friends', FriendsController::class);
+Route::apiResource('posts', PostController::class);
+Route::apiResource('smiles', SmileController::class);
+Route::apiResource('smiles-comments', SmileCommentController::class);
 Route::apiResource('users', UserController::class);
 

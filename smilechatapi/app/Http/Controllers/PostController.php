@@ -26,4 +26,16 @@ class PostController extends Controller
         $Post = Post::where('id', '=', $id)->first();
         $Post->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $Post = Post::where('id', '=', $id)->first();
+        $Post->delete();
+    }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'post'=>'required',
+        ]);
+            return $request->input();
+        }
 }

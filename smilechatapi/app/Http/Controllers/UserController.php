@@ -36,4 +36,15 @@ class UserController extends Controller
         $user = User::where('id', '=', $id)->first();
         $user->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'name'=>'required',
+            'surname'=>'required',
+            'email'=>'required',
+            'password'=>'required',
+
+        ]);
+            return $request->input();
+        }
 }
