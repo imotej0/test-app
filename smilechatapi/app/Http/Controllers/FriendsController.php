@@ -15,10 +15,14 @@ class FriendsController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id1' => 'required|integer|digits:5',
-      'user_id2' => 'required|integer|digits:5'
+        $request->validate([
+      'user_id1' => 'required|integer',
+      'user_id2' => 'required|integer'
       ]);
+        $Friends= new Friends;
+        $Friends->user_id1=$request->user_id1;
+        $Friends->user_id2=$request->user_id2;
+        $Friends=$Friends->save();
     }
     public function update(Request $request, $id)
     {
@@ -30,12 +34,4 @@ class FriendsController extends Controller
         $Friends = Friends::where('id', '=', $id)->first();
         $Friends->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'user_id1'=>'required',
-            'user_id2'=>'required',
-        ]);
-            return $request->input();
-        }
 }

@@ -15,16 +15,24 @@ class UserController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
+        $request->validate([
       'name' => 'required|max:255',
       'surname' => 'required|max:255',
       'username' => 'required|max:255',
       'email' => 'required|max:255',
-      'email_verified_at' => 'required|integer|digits:5',
       'password' => 'required',
-      'User_photo' => 'required',
+      'user_photo' => 'required',
       'bio' => 'required'
       ]);
+        $User= new User;
+        $User->name=$request->name;
+        $User->surname=$request->surname;
+        $User->username=$request->username;
+        $User->email=$request->email;
+        $User->password=$request->password;
+        $User->user_photo=$request->user_photo;
+        $User->bio=$request->bio;
+        $User=$User->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,15 +44,4 @@ class UserController extends Controller
         $user = User::where('id', '=', $id)->first();
         $user->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'name'=>'required',
-            'surname'=>'required',
-            'email'=>'required',
-            'password'=>'required',
-
-        ]);
-            return $request->input();
-        }
 }

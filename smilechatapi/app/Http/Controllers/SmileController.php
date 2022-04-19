@@ -16,11 +16,16 @@ class SmileController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|integer|digits:5',
-      'post_id' => 'required|integer|digits:5',
+        $request->validate([
+      'user_id' => 'required|integer',
+      'post_id' => 'required|integer',
       'smile' => 'required',
       ]);
+        $Smile= new Smile;
+        $Smile->user_id=$request->user_id;
+        $Smile->post_id=$request->post_id;
+        $Smile->smile=$request->smile;
+        $Smile=$Smile->save();
     }
     public function update(Request $request, $id)
     {
@@ -32,11 +37,4 @@ class SmileController extends Controller
         $Smile = Smile::where('id', '=', $id)->first();
         $Smile->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'smile'=>'required',
-        ]);
-            return $request->input();
-        }
 }

@@ -15,11 +15,16 @@ class PostController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|integer|digits:5',
-      'post' => 'required|integer|digits:5',
+        $request->validate([
+      'user_id' => 'required|integer',
+      'post' => 'required|integer',
       'caption' => 'required',
       ]);
+        $Post= new Post;
+        $Post->user_id=$request->user_id;
+        $Post->post=$request->post;
+        $Post->caption=$request->caption;
+        $Post=$Post->save();
     }
     public function update(Request $request, $id)
     {
@@ -31,11 +36,4 @@ class PostController extends Controller
         $Post = Post::where('id', '=', $id)->first();
         $Post->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'post'=>'required',
-        ]);
-            return $request->input();
-        }
 }

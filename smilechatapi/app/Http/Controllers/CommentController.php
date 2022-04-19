@@ -15,11 +15,16 @@ class CommentController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|integer|digits:5',
-      'post_id' => 'required|integer|digits:5',
+        $request->validate([
+      'user_id' => 'required|integer',
+      'post_id' => 'required|integer',
       'comment' => 'required',
       ]);
+        $Comment= new Comment;
+        $Comment->user_id=$request->user_id;
+        $Comment->post_id=$request->post_id;
+        $Comment->comment=$request->comment;
+        $Comment=$Comment->save();
     }
     public function update(Request $request, $id)
     {
@@ -31,11 +36,4 @@ class CommentController extends Controller
         $Comment = Comment::where('id', '=', $id)->first();
         $Comment->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'comment'=>'required',
-        ]);
-            return $request->input();
-        }
 }
