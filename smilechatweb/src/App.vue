@@ -15,13 +15,13 @@
         <v-icon>mdi-home</v-icon>
       </router-link>
 
-      <v-btn icon>
-        <v-icon>mdi-message</v-icon>
-      </v-btn>
-
        <v-btn icon>
         <v-icon>mdi-plus</v-icon>
       </v-btn>
+
+       <router-link to="/Messages">
+        <v-icon>mdi-message</v-icon>
+      </router-link>
 
        <v-btn icon>
         <v-icon>mdi-emoticon</v-icon>
