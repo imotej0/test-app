@@ -28,7 +28,7 @@ class ChatController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Chat=Chat::find($request->id);
+        $Chat=Chat::find($id);
         $Chat->user_id=$request->user_id;
         $Chat->friend_id=$request->friend_id;
         $Chat->message=$request->message;

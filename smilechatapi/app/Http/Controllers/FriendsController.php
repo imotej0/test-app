@@ -26,7 +26,7 @@ class FriendsController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Friends=Friends::find($request->id);
+        $Friends=Friends::find($id);
         $Friends->user_id1=$request->user_id1;
         $Friends->user_id2=$request->user_id2;
         $Friends=$Friends->save();

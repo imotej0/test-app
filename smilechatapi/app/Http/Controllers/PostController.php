@@ -28,7 +28,7 @@ class PostController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Post=Post::find($request->id);
+        $Post=Post::find($id);
         $Post->user_id=$request->user_id;
         $Post->post=$request->post;
         $Post->caption=$request->caption;

@@ -28,7 +28,7 @@ class CommentController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Comment=Comment::find($request->id);
+        $Comment=Comment::find($id);
         $Comment->user_id=$request->user_id;
         $Comment->post_id=$request->post_id;
         $Comment->comment=$request->comment;

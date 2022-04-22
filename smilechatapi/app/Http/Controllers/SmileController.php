@@ -29,7 +29,7 @@ class SmileController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Smile=Smile::find($request->id);
+        $Smile=Smile::find($id);
         $Smile->user_id=$request->user_id;
         $Smile->post_id=$request->post_id;
         $Smile->smile=$request->smile;
