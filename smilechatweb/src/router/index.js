@@ -55,6 +55,16 @@ const routes = [
       name: 'Messages',
       component: () => import(/* webpackChunkName: "Profile" */ '../views/Messages.vue')
     },
+    {
+      path: '/Proba',
+      name: 'Proba',
+      component: () => import(/* webpackChunkName: "Proba" */ '../views/Proba.vue')
+    },
+    {
+      path: '/explore',
+      name: 'explore',
+      component: () => import(/* webpackChunkName: "explore" */ '../views/explore.vue')
+    },
     
     
 ]

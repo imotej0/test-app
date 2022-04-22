@@ -1,48 +1,88 @@
 <template>
-  <section class="section-container">
-    <v-row class="signin">
-      <v-col cols="8" class="left">
-        <h1>Welcome to my site</h1>
-      </v-col>
-      <v-col cols="4" class="right">
-        <h2>LOGIN</h2>
-        <validation-observer ref="observer">
-          <v-form @submit.prevent="submit">
-            <validation-provider v-slot="{ errors }" name="Name" rules="required|email">
-              <v-text-field
-                v-model="email"
-                :error-messages="errors"
-                label="Email"
-                required
-                outlined
-                dark
-                filled
-                dense
-              ></v-text-field>
-            </validation-provider>
-            <validation-provider v-slot="{ errors }" name="email" rules="required">
-              <v-text-field
-                v-model="password"
-                :error-messages="errors"
-                label="Password"
-                :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
-                @click:append="showPass = !showPass"
-                required
-                outlined
-                dense
-                dark
-                filled
-                :type="showPass ? 'text' : 'password'"
-              ></v-text-field>
-            </validation-provider>
-            <div class="text-center">
-              <v-btn class="signin-btn" type="submit" rounded color="white" dark>
-                Sign In
-              </v-btn>
-            </div>
-          </v-form>
-        </validation-observer>
-      </v-col>
-    </v-row>
-  </section>
+  <v-app id="inspire">
+    <v-app-bar
+      app
+      color="white"
+      flat
+    >
+      <v-avatar
+        :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'"
+        size="32"
+      ></v-avatar>
+
+      <v-tabs
+        centered
+        class="ml-n9"
+        color="grey darken-1"
+      >
+        <v-tab
+          v-for="link in links"
+          :key="link"
+        >
+          {{ link }}
+        </v-tab>
+      </v-tabs>
+
+      <v-avatar
+        class="hidden-sm-and-down"
+        color="grey darken-1 shrink"
+        size="32"
+      ></v-avatar>
+    </v-app-bar>
+
+    <v-main class="grey lighten-3">
+      <v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="2"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="268"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+
+          <v-col
+            cols="12"
+            sm="8"
+          >
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+
+          <v-col
+            cols="12"
+            sm="2"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="268"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      links: [
+        'Dashboard',
+        'Messages',
+        'Profile',
+        'Updates',
+      ],
+    }),
+  }
+</script>

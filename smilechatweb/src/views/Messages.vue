@@ -1,10 +1,44 @@
 <template>
   <v-app id="inspire">
+   
+      <v-spacer></v-spacer>
+
+
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <v-sheet
+        color="grey lighten-4"
+        class="pa-4"
+      >
+        <div>Timotej Trsavec</div>
+      </v-sheet>
+
+      <v-divider></v-divider>
+
+      <v-list>
+        <v-list-item
+          v-for="[icon, ] in links"
+          :key="icon"
+          link
+        >
+         <v-list-item-content>
+                    
+                      <v-list-item-subtitle >
+                        <v-icon> mdi-account </v-icon>
+                        Jovan
+                        <p>Active 1 hour ago</p>
+                      </v-list-item-subtitle>
+                    </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-main>
       <v-container
         class="py-8 px-6"
         fluid
-        align=center
       >
         <v-row>
           <v-col
@@ -28,7 +62,7 @@
                       <v-list-item-title>Jovan</v-list-item-title>
 
                       <v-list-item-subtitle>
-                        Pekarna Drava ma poceni pico sao 1.5e drugac zenit je boljsi
+                        Jo stari kak si
                       </v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
