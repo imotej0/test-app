@@ -26,8 +26,10 @@ class FriendsController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Friends = Friends::where('id', '=', $id)->first();
-        $Friends->update($request->all());
+        $Friends=Friends::find($request->id);
+        $Friends->user_id1=$request->user_id1;
+        $Friends->user_id2=$request->user_id2;
+        $Friends=$Friends->save();
     }
     public function destroy(Request $request, $id)
     {

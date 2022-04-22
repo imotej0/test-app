@@ -28,8 +28,11 @@ class ChatController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Chat = Chat::where('id', '=', $id)->first();
-        $Chat->update($request->all());
+        $Chat=Chat::find($request->id);
+        $Chat->user_id=$request->user_id;
+        $Chat->friend_id=$request->friend_id;
+        $Chat->message=$request->message;
+        $Chat=$Chat->save();
     }
     public function destroy(Request $request, $id)
     {

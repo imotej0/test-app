@@ -28,8 +28,11 @@ class PostController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Post = Post::where('id', '=', $id)->first();
-        $Post->update($request->all());
+        $Post=Post::find($request->id);
+        $Post->user_id=$request->user_id;
+        $Post->post=$request->post;
+        $Post->caption=$request->caption;
+        $Post=$Post->save();
     }
     public function destroy(Request $request, $id)
     {

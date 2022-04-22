@@ -28,8 +28,11 @@ class SmileCommentController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $SmileComment = SmileComment::where('id', '=', $id)->first();
-        $SmileComment->update($request->all());
+        $SmileComment=SmileComment::find($request->id);
+        $SmileComment->user_id=$request->user_id;
+        $SmileComment->comment_id=$request->comment_id;
+        $SmileComment->smile=$request->smile;
+        $SmileComment=$SmileComment->save();
     }
     public function destroy(Request $request, $id)
     {

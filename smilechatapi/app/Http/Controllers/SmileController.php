@@ -29,8 +29,11 @@ class SmileController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $Smile = Smile::where('id', '=', $id)->first();
-        $Smile->update($request->all());
+        $Smile=Smile::find($request->id);
+        $Smile->user_id=$request->user_id;
+        $Smile->post_id=$request->post_id;
+        $Smile->smile=$request->smile;
+        $Smile=$Smile->save();
     }
     public function destroy(Request $request, $id)
     {
