@@ -1,99 +1,165 @@
 <template>
+<v-card
+    color="white"
+    flat
+    height="50px"
+    tile
+    align=center
+  >
+    
+       <v-card
+    class="mx-auto"
+    color="#white"
+    max-width="800"
+    height="60"
+    align=left
+  
+  >
+  <v-card-title class="d-flex align-space-between" >
+      <v-icon
+        large
+        left
+      >
+        mdi-account-circle
 
-  <v-app id="inspire">
-    <v-app-bar
-      app
-      color="white"
-      flat
+      </v-icon>
+       <v-icon
+        large
+        left
+        v-list-item-avatar color="blue"
+      >
      
-    >
-      <v-container class="py-0 fill-height">
-        <v-avatar
-          class="mr-10"
-          color="white"
-          size="32"
+     
       
-        ></v-avatar>
+        mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+        v-list-item-avatar color="blue"
+      >
+       mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+       >
+          mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+          mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+         >
+          mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+      >
+        mdi-account-circle
+      </v-icon>
+        <v-icon
+        large
+        left
+         v-list-item-avatar color="blue"
+      >
+        mdi-account-circle
+      </v-icon>  <v-icon
+        large
+        left
+      >
+       
+      </v-icon>
+    </v-card-title>
+    <v-card-title>
+      <v-icon
+        large
+        left
+      >
+      </v-icon>
+    </v-card-title>
+  <v-card
+  
+    class="mx-auto"
+    color="#fff"
+    white
+    max-width="800"
+    height="500"
+  >
+  <v-icon>
+      mdi-account-circle 
+      </v-icon>
+    <span class="text-h7 font-weight-light">Jovan</span>
+    <v-card-title>
+      <v-icon
+        large
+        left
+      >
+      </v-icon>
+    </v-card-title>
+    <v-img
+  lazy-src="https://picsum.photos/id/11/10/6"
+  max-height="500"
+  max-width="800"
+  src="https://picsum.photos/id/11/500/300"
+></v-img>
 
-        <v-btn
-          v-for="link in links"
-          :key="link"
-          text
+    <v-card-actions>
+      <v-list-item class="grow">
+        <v-row
+          align="center"
+          justify=""
         >
-          {{ link }}
-        </v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-responsive max-width="260">
-          <v-text-field
-            dense
-            flat
-            hide-details
-            rounded
-            solo-inverted
-          ></v-text-field>
-        </v-responsive>
-      </v-container>
-    </v-app-bar>
-
-    <v-main class="grey lighten-3">
-      <v-container>
-        <v-row>
-          <v-col cols="2">
-            <v-sheet rounded="lg">
-              <v-list color="transparent">
-                <v-list-item
-                  v-for="n in 5"
-                  :key="n"
-                  link
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      List Item {{ n }}
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-
-                <v-divider class="my-2"></v-divider>
-
-                <v-list-item
-                  link
-                  color="grey lighten-4"
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      Refresh
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-sheet>
-          </v-col>
-
-          <v-col>
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-            >
-              <!--  -->
-            </v-sheet>
-          </v-col>
+          <v-btn icon>
+        <v-icon>mdi-emoticon</v-icon>
+      </v-btn>
+          <span class="mr-2"></span>
+          <v-btn icon>
+        <v-icon>mdi-comment</v-icon>
+      </v-btn>
+           <v-btn icon>
+        <v-icon>mdi-share-variant</v-icon>
+      </v-btn>
         </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
+      </v-list-item>
+    </v-card-actions>
+ <v-card-subtitle class="text-h7 font-weight-gray">
+      1600 smiles
+    </v-card-subtitle>
+    <v-card-text class="text-h7 font-weight-black">
+      Turns out semicolon-less style is easier and safee.....more
+    </v-card-text>
+      <v-card-text class="text-h7 font-weight-gray">
+      View all 100 comments
+    </v-card-text>
+ <v-card-text class="text-h7 font-weight-gray">
+      1 hour ago
+    </v-card-text>
+  </v-card>
+  </v-card>
+       </v-card>
 </template>
 
 <script>
   export default {
     data: () => ({
-      links: [
-        'Dashboard',
-        'Messages',
-        'Profile',
-        'Updates',
+      bars: [
+        { class: '' },
+        { class: '', dark: true },
+        { class: 'primary', dark: true },
+        { class: 'elevation-0' },
       ],
     }),
   }
+  
 </script>
+
+<style>
+
+</style>
