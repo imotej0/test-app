@@ -14,6 +14,7 @@ use App\Http\Controllers\FriendsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SmileController;
 use App\Http\Controllers\SmileCommentController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +29,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//   return $request->user();
+//});
 
 Route::apiResource('chats', ChatController::class);
 Route::apiResource('comments', CommentController::class);
@@ -40,3 +41,7 @@ Route::apiResource('smiles', SmileController::class);
 Route::apiResource('smiles-comments', SmileCommentController::class);
 Route::apiResource('users', UserController::class);
 
+//users
+Route::prefix('/users')->group( function() {
+    Route::post('/login', [LoginController::class, 'login']);
+});

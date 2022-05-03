@@ -25,6 +25,7 @@ class PostController extends Controller
         $Post->post=$request->post;
         $Post->caption=$request->caption;
         $Post=$Post->save();
+        return $Post;
     }
     public function update(Request $request, $id)
     {
@@ -33,6 +34,7 @@ class PostController extends Controller
         $Post->post=$request->post;
         $Post->caption=$request->caption;
         $Post=$Post->save();
+        return $Post;
     }
     public function destroy(Request $request, $id)
     {

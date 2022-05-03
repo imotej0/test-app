@@ -25,6 +25,7 @@ class SmileCommentController extends Controller
         $SmileComment->comment_id=$request->comment_id;
         $SmileComment->smile=$request->smile;
         $SmileComment=$SmileComment->save();
+        return $SmileComment;
     }
     public function update(Request $request, $id)
     {
@@ -33,6 +34,7 @@ class SmileCommentController extends Controller
         $SmileComment->comment_id=$request->comment_id;
         $SmileComment->smile=$request->smile;
         $SmileComment=$SmileComment->save();
+        return $SmileComment;
     }
     public function destroy(Request $request, $id)
     {

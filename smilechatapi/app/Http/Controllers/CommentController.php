@@ -25,6 +25,7 @@ class CommentController extends Controller
         $Comment->post_id=$request->post_id;
         $Comment->comment=$request->comment;
         $Comment=$Comment->save();
+        return $Comment;
     }
     public function update(Request $request, $id)
     {
@@ -33,6 +34,7 @@ class CommentController extends Controller
         $Comment->post_id=$request->post_id;
         $Comment->comment=$request->comment;
         $Comment=$Comment->save();
+        return $Comment;
     }
     public function destroy(Request $request, $id)
     {

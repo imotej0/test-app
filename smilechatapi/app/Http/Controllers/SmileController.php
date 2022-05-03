@@ -26,6 +26,7 @@ class SmileController extends Controller
         $Smile->post_id=$request->post_id;
         $Smile->smile=$request->smile;
         $Smile=$Smile->save();
+        return $Smile;
     }
     public function update(Request $request, $id)
     {
@@ -34,6 +35,7 @@ class SmileController extends Controller
         $Smile->post_id=$request->post_id;
         $Smile->smile=$request->smile;
         $Smile=$Smile->save();
+        return $Smile;
     }
     public function destroy(Request $request, $id)
     {

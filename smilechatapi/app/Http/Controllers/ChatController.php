@@ -25,6 +25,7 @@ class ChatController extends Controller
         $Chat->friend_id=$request->friend_id;
         $Chat->message=$request->message;
         $Chat=$Chat->save();
+        return $Chat;
     }
     public function update(Request $request, $id)
     {
@@ -33,6 +34,7 @@ class ChatController extends Controller
         $Chat->friend_id=$request->friend_id;
         $Chat->message=$request->message;
         $Chat=$Chat->save();
+        return $Chat;
     }
     public function destroy(Request $request, $id)
     {

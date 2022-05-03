@@ -33,6 +33,7 @@ class UserController extends Controller
         $User->user_photo=$request->user_photo;
         $User->bio=$request->bio;
         $User=$User->save();
+        return $User;
     }
     public function update(Request $request, $id)
     {
@@ -45,6 +46,7 @@ class UserController extends Controller
         $User->user_photo=$request->user_photo;
         $User->bio=$request->bio;
         $User=$User->save();
+        return $User;
     }
     public function destroy(Request $request, $id)
     {

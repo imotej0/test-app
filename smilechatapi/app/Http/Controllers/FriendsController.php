@@ -23,6 +23,7 @@ class FriendsController extends Controller
         $Friends->user_id1=$request->user_id1;
         $Friends->user_id2=$request->user_id2;
         $Friends=$Friends->save();
+        return $Friends;
     }
     public function update(Request $request, $id)
     {
@@ -30,6 +31,7 @@ class FriendsController extends Controller
         $Friends->user_id1=$request->user_id1;
         $Friends->user_id2=$request->user_id2;
         $Friends=$Friends->save();
+        return $Friends;
     }
     public function destroy(Request $request, $id)
     {
