@@ -9,8 +9,10 @@
       app
     >
       <v-sheet
-        color="grey lighten-4"
+        color="white"
         class="pa-4"
+        height="50"
+        
       >
         <div>Timotej Trsavec</div>
       </v-sheet>
@@ -25,12 +27,12 @@
         >
          <v-list-item-content>
                     
-                      <v-list-item-subtitle >
-                        <v-icon> mdi-account </v-icon>
-                        Jovan
-                        <p>Active 1 hour ago</p>
-                      </v-list-item-subtitle>
-                    </v-list-item-content>
+          <v-list-item-subtitle>
+          <v-icon> mdi-account </v-icon>
+          Jovan
+          <p>Active 1 hour ago</p>
+          </v-list-item-subtitle>
+          </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -55,23 +57,17 @@
 
                     :key="n"
                   >
-                    <v-list-item-avatar color="grey darken-1">
+                    <v-list-item-avatar color="blue">
                     </v-list-item-avatar>
 
-                    <v-list-item-content>
+                    <v-list-item-content >
                       <v-list-item-title>Jovan</v-list-item-title>
 
-                      <v-list-item-subtitle>
+                      <v-list-item-subtitle>    
                         Jo stari kak si
                       </v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
-
-                  <v-divider
-                    v-if="n !== 6"
-                    :key="`divider-${n}`"
-                    inset
-                  ></v-divider>
                 </template>
               </v-list>
             </v-card>

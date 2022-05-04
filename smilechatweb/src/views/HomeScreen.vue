@@ -120,9 +120,9 @@
         <v-icon>mdi-emoticon</v-icon>
       </v-btn>
           <span class="mr-2"></span>
-          <v-btn icon>
+         <router-link to="/Comments">
         <v-icon>mdi-comment</v-icon>
-      </v-btn>
+      </router-link>
            <v-btn icon>
         <v-icon>mdi-share-variant</v-icon>
       </v-btn>
@@ -131,7 +131,7 @@
     </v-card-actions>
  <v-card-subtitle class="text-h7 font-weight-gray">
       1600 smiles
-    </v-card-subtitle>
+ </v-card-subtitle>
     <v-card-text class="text-h7 font-weight-black">
       Turns out semicolon-less style is easier and safee.....more
     </v-card-text>

@@ -17,27 +17,28 @@
      <router-link to="/HomeScreen">
         <v-icon>mdi-home</v-icon>
       </router-link>
-
+&nbsp;&nbsp;
        <v-btn icon>
         <v-icon>mdi-plus</v-icon>
       </v-btn>
-
+&nbsp;&nbsp;
       <router-link to="/Explore">
         <v-icon>mdi-compass</v-icon>
       </router-link>
-      
-       <v-btn icon>
+ &nbsp;&nbsp;
+      <router-link to="/Notification">
         <v-icon>mdi-emoticon</v-icon>
-      </v-btn>
-
-       <router-link to="/Messages">
+      </router-link>
+&nbsp;&nbsp;
+      <router-link to="/Messages">
         <v-icon>mdi-message</v-icon>
       </router-link>
-
+&nbsp;&nbsp;
       
       <router-link to="/Profile">
         <v-icon>mdi-account</v-icon>
       </router-link>
+&nbsp;&nbsp;
     </v-toolbar>
       <router-view/>
      
