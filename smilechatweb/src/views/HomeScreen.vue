@@ -1,4 +1,5 @@
 <template>
+
 <v-card
     color="white"
     flat
@@ -123,9 +124,9 @@
          <router-link to="/Comments">
         <v-icon>mdi-comment</v-icon>
       </router-link>
-           <v-btn icon>
-        <v-icon>mdi-share-variant</v-icon>
-      </v-btn>
+          <router-link to="/shere">
+        <v-icon> mdi-share-variant</v-icon>
+      </router-link>
         </v-row>
       </v-list-item>
     </v-card-actions>
