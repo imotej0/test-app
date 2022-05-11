@@ -1,88 +1,188 @@
 <template>
-  <v-app id="inspire">
-    <v-app-bar
-      app
-      color="white"
-      flat
+  <v-app id="/reg">  
+    <v-toolbar 
+    dense
+    color="#009999"
+    dark
     >
-      <v-avatar
-        :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'"
-        size="32"
-      ></v-avatar>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/listasporocil">
+        <v-icon>mdi-send-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/nastavitve">
+        <v-icon>mdi-cog-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-plus-box-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-flag-outline</v-icon>
+      </router-link>
+      <v-spacer></v-spacer>
+      
+      <v-text-field
+            placeholder="Search:"
+            class="d-flex"
+            solo
+            rounded
+            dense
+            light
+            justify=center
+            align=center
+          >
+          </v-text-field>
 
-      <v-tabs
-        centered
-        class="ml-n9"
-        color="grey darken-1"
-      >
-        <v-tab
-          v-for="link in links"
-          :key="link"
+      <v-spacer></v-spacer>
+
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-account-circle</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-calendar</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-format-align-justify</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </v-toolbar>
+    <v-container class="fill-height" fluid>
+                
+      <v-card
+         class="mx-auto"
+         color="#ECECEC"
+         light
+         max-width="1200"
+         width="1200"
         >
-          {{ link }}
-        </v-tab>
-      </v-tabs>
+        <v-card class="ma-5 mb-7" 
+        rounded 
+        elevation=5 
+        color=#DEDEDE
+        >
+        <v-card-title>
+          <v-list-item-avatar color="grey darken-3">
+            <v-icon dark>mdi-account</v-icon> 
+            </v-list-item-avatar>
 
-      <v-avatar
-        class="hidden-sm-and-down"
-        color="grey darken-1 shrink"
-        size="32"
-      ></v-avatar>
-    </v-app-bar>
+            <v-list-item-content>
+              <v-list-item-title>Jolex</v-list-item-title>
+            </v-list-item-content>
+          
+        </v-card-title>
 
-    <v-main class="grey lighten-3">
-      <v-container>
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+      
+      
+        <v-card-title>
+          <v-list-item-avatar color="grey darken-3">
+            <v-icon dark>mdi-account</v-icon> 
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>Tokiyolo</v-list-item-title>
+            </v-list-item-content>
+          
+        </v-card-title>
+
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+        <v-card-title>
+          <v-list-item-avatar color="grey darken-3">
+            <v-icon dark>mdi-account</v-icon> 
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>Jolex</v-list-item-title>
+            </v-list-item-content>
+          
+        </v-card-title>
+
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+      
+      
+        <v-card-title>
+          <v-list-item-avatar color="grey darken-3">
+            <v-icon dark>mdi-account</v-icon> 
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>Tokiyolo</v-list-item-title>
+            </v-list-item-content>
+          
+        </v-card-title>
+
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+        <v-card-title>
+          <v-list-item-avatar color="grey darken-3">
+            <v-icon dark>mdi-account</v-icon> 
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>Jolex</v-list-item-title>
+            </v-list-item-content>
+          
+        </v-card-title>
+
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+        <v-card-text class="text-h9 font-weight-bold">
+          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+        </v-card-text>
+      </v-card>
+        
         <v-row>
-          <v-col
-            cols="12"
-            sm="2"
+          <v-btn rounded width=5 class="mx-5">
+          <v-card-title primary-titles class="justify-center">
+                  <v-icon  light size="30" >mdi-image-multiple</v-icon> 
+                </v-card-title>
+          </v-btn>
+          <v-text-field
+            placeholder="Chat"
+            solo
+            dense
+            light
+            justify=center
+            align=center
+            width=100
           >
-            <v-sheet
-              rounded="lg"
-              min-height="268"
-            >
-              <!--  -->
-            </v-sheet>
-          </v-col>
-
-          <v-col
-            cols="12"
-            sm="8"
-          >
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-            >
-              <!--  -->
-            </v-sheet>
-          </v-col>
-
-          <v-col
-            cols="12"
-            sm="2"
-          >
-            <v-sheet
-              rounded="lg"
-              min-height="268"
-            >
-              <!--  -->
-            </v-sheet>
-          </v-col>
+          </v-text-field>
+          <v-btn rounded width=5 class="mx-5">
+          <v-card-title primary-titles class="justify-center">
+                  <v-icon  light size="30" >mdi-navigation-variant</v-icon> 
+          </v-card-title>
+          </v-btn>
         </v-row>
-      </v-container>
-    </v-main>
+        
+      </v-card>
+      
+                    
+    </v-container>
   </v-app>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      links: [
-        'Dashboard',
-        'Messages',
-        'Profile',
-        'Updates',
-      ],
-    }),
+export default {
+  data: () => ({
+    step: 1
+  }),
+  props: {
+    source: String
   }
+};
 </script>

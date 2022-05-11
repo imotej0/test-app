@@ -21,7 +21,7 @@
                 <v-list-item-title-font-size>
                   <v-btn
                   tile
-                  color="Grey"
+                  color="success"
                 >
                   <v-icon left>
                     mdi-pencil
@@ -29,8 +29,8 @@
                   Edit
                 </v-btn>
                     <v-list-item-title class="text-h5 font-weight-bold" align="left">gugunovic_official</v-list-item-title>
-                    
-                    <v-list-item-title class="text-h5 font-weight" align="left">8 Posts  &nbsp;&nbsp;&nbsp;&nbsp; 46 Followers &nbsp;&nbsp;&nbsp;&nbsp; 4 Following</v-list-item-title>
+                     <v-list-item-title class="text-h5 font-weight" align="left">8 Posts  &nbsp;&nbsp;&nbsp;&nbsp; 46 Followers &nbsp;&nbsp;&nbsp;&nbsp; 4 Following</v-list-item-title>
+                     <v-list-item-title class="text-h5 font-weight" align="left">Jovan Gugunovic</v-list-item-title>
                 </v-list-item-title-font-size>
               </v-list-item-content>
        
