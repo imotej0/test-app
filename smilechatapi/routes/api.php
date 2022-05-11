@@ -44,4 +44,5 @@ Route::apiResource('users', UserController::class);
 //users
 Route::prefix('/users')->group( function() {
     Route::post('/login', [LoginController::class, 'login']);
+    Route::middleware('auth:api')->get('/all', [Usercontroller::class, 'index']);
 });
