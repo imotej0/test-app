@@ -24,6 +24,12 @@
               <check-box></check-box>
                <check-box></check-box>
               <check-box></check-box>
+              <check-box></check-box>
+              <check-box></check-box>
+               <check-box></check-box>
+              <check-box></check-box>
+               <check-box></check-box>
+              <check-box></check-box>
 </v-row>
 </v-card>
 </v-container>
