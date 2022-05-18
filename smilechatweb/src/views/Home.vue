@@ -39,7 +39,7 @@
                                <router-link to="/fpassword">Forgot password?</router-link>
                               </v-col>
                             </v-row>
-                          <v-btn color="blue" dark block tile>Log in</v-btn>                    
+                          <v-btn color="blue" dark block tile @click="login">Log in</v-btn>                    
                           </v-col>
                         </v-row>  
                       </v-card-text>
@@ -64,7 +64,7 @@
                         <h3 class="text-center ">Already have account? </h3>
                       </v-card-text>
                       <div class="text-center">
-                        <v-btn tile outlined dark @click="step--">Log in</v-btn>
+                        <v-btn tile outlined dark @click="login">Log in</v-btn>
                       </div>
                       </div>
                     </v-col>
@@ -120,7 +120,7 @@
                               <v-col cols="12" sm="7">
                               </v-col>
                             </v-row>
-                          <v-btn color="blue" dark block tile>Sign up</v-btn>
+                          <v-btn color="blue" dark block tile @click="login">Sign up</v-btn>
                           <router-link to="/Verfication"></router-link>
                           </v-col>
                         </v-row>  
@@ -144,7 +144,15 @@
   }),
   props: {
     source: String
-  } 
+  },
+  methods:{
+    login(){
+      this.$http.post("http://localhost:8000/api/users/login",{email:"jovan.gugunovic@sers.si", password:"test443"
+      }).then(response=>{
+        console.log(response.data);
+      })
+    }
+  }
 
     
   }
